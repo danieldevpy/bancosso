@@ -1,7 +1,7 @@
 import pandas as pd
 import re
 import unidecode
-from src.controller.relatorio import RelatorioController, Relatorio
+from src.controller.relatorio import RelatorioController, Relatorios2024
 
 
 def insert_from_excell(path):
@@ -23,7 +23,7 @@ def insert_from_excell(path):
         row = df.iloc[i]
         row_dict = row.to_dict()
         try:
-            relatories.append(Relatorio.fill(row_dict))
+            relatories.append(Relatorios2024.fill(row_dict))
         except Exception as e:
             print(f'erro na linha {i} : {str(e)}')
             print(row_dict)

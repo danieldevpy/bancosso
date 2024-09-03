@@ -1,9 +1,8 @@
-from src.database.models import Relatorio
-from src.controller.relatorio import RelatorioController
+
 from src.view.insertExcell import insert_from_excell
 
 
-path = '/home/daniel/Documentos/programaçao/banquin/finaldf.xlsx'
+path = '/home/cisbaf/Documentos/bancosso/finaldf.xlsx'
 
 insert_from_excell(path)
 
