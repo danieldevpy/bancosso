@@ -38,7 +38,6 @@ class RelatorioController:
         with Session(engine) as session:
             relatorio = session.get(Relatorios2024, relatorio_id)
             if relatorio:
-                # Update fields as needed
                 for key, value in new_data.dict(exclude_unset=True).items():
                     setattr(relatorio, key, value)
                 session.add(relatorio)

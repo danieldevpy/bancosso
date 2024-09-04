@@ -20,6 +20,8 @@ def insert_from_excell(path):
     relatories = []
     err = False
     for i in range(rows - 1):
+        # p = i * 100
+        # print(int(p/rows))
         row = df.iloc[i]
         row_dict = row.to_dict()
         try:
